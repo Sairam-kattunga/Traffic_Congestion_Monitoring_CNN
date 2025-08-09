@@ -50,16 +50,13 @@ def predict(image):
     return confidence_scores
 
 # --- 4. Build the Gradio Interface (No changes here) ---
+# AFTER
 demo = gr.Interface(
     fn=predict,
     inputs=gr.Image(type="pil", label="Upload Traffic Image"),
     outputs=gr.Label(num_top_classes=2, label="Prediction"),
     title="🚦 Traffic Congestion Detector",
     description="Upload an image of a road to classify its traffic congestion level. This demo uses a ResNet50 model trained via transfer learning.",
-    examples=[
-        "dataset/High_Congestion/1.jpg",
-        "dataset/Low_Congestion/1.jpg"
-    ],
     article="<p style='text-align: center;'>A project to demonstrate computer vision skills using TensorFlow, Keras, and Gradio.</p>"
 )
 
