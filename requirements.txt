@@ -1,5 +1,5 @@
 tensorflow==2.16.1
-gradio==4.31.0
+gradio==4.44.1
 numpy
 Pillow
 h5py
