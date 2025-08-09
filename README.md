@@ -1,189 +1,144 @@
-# 🚦 Monitoring Traffic Congestion in Smart Cities Using CNN
-<img width="2176" height="1224" alt="image" src="https://github.com/user-attachments/assets/54150926-c207-404e-9748-fcae7b6cb412" />
 
+# 🚦 Monitoring Traffic Congestion in Smart Cities Using CNN
 
 <div align="center">
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![TensorFlow Version](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![Made with Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![GitHub Repo Stars](https://img.shields.io/github/stars/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN?style=social)](https://github.com/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN/stargazers)
 
 </div>
 
-This project offers a deep learning-based solution for real-time traffic congestion analysis. By leveraging Convolutional Neural Networks (CNNs), the system classifies road images into *High Congestion* and *Low Congestion* categories. The core focus is on achieving high accuracy by comparing a custom-built CNN against state-of-the-art pre-trained models like *VGG16, **ResNet50, and **MobileNetV2* through Transfer Learning.
+---
+
+## 📌 Overview
+
+This project offers a **deep learning-based solution** for **real-time traffic congestion analysis**.  
+Using **Convolutional Neural Networks (CNNs)**, the system classifies road images into **High Congestion** and **Low Congestion** categories.
+
+We compare a **custom CNN** against **transfer learning** models — *VGG16, ResNet50, and MobileNetV2* — to find the most accurate architecture.
 
 ---
 
 ## 🌟 Key Features
 
-* *High-Accuracy Classification:* Differentiates between high and low traffic congestion states from static images.
-* *Comparative Model Analysis:* Trains, evaluates, and compares four distinct CNN architectures to identify the optimal model.
-* *Transfer Learning:* Implements transfer learning with VGG16, ResNet50, and MobileNetV2 to leverage pre-trained weights for superior performance.
-* *Data Augmentation:* Utilizes Keras's data augmentation capabilities to create a more robust and generalized model, preventing overfitting.
-* *Modular & Reproducible:* The code is structured into clean, modular scripts for easy understanding, execution, and reproduction of results.
+- 📷 **High-Accuracy Classification** — Detects congestion states from static images.
+- 🔍 **Comparative Model Analysis** — Evaluates 4 CNN architectures.
+- ♻ **Transfer Learning** — Uses pre-trained models for better performance.
+- 🖼 **Data Augmentation** — Improves robustness and prevents overfitting.
+- 🧩 **Modular Codebase** — Clean scripts for reproducibility.
 
 ---
-
-## 🚀 Live Demo (Example)
-
-A live, interactive demo of this model can be deployed using services like Hugging Face Spaces or Streamlit Cloud.
-
 
 ## 📊 Results Sneak-Peek
 
-The ResNet50 model, enhanced with transfer learning, emerged as the top performer, achieving an outstanding *~99% accuracy*. The confusion matrix below visually confirms its ability to distinguish between the two classes with very few errors.
+**🏆 Best Model:** `ResNet50 (Transfer Learning)` → **~99% Accuracy**
 
-![ResNet50 Confusion Matrix](resnet50_transfer_confusion_matrix.png)
+![ResNet50 Confusion Matrix](results/resnet50_transfer_confusion_matrix.png)
 
-
+| Model                 | Accuracy | Notes |
+| --------------------- | :------: | ----- |
+| Custom CNN            |  89%     | Baseline model |
+| VGG16 (Transfer)      |  96%     | Significant improvement |
+| MobileNetV2 (Transfer)|  98%     | High efficiency |
+| **ResNet50 (Transfer)** | **99%** | Best performer |
 
 ---
 
-## 🔧 Project Workflow
+## 🛠 Project Workflow
 
-The project follows a standard machine learning pipeline, from data preprocessing to model evaluation.
-
-
+1. **Data Preprocessing** → Organize and augment dataset.
+2. **Model Training** → Train custom CNN and transfer learning models.
+3. **Evaluation** → Generate accuracy reports & confusion matrices.
+4. **Comparison** → Select best-performing model.
 
 ---
 
 ## 📂 Repository Structure
 
-The project is organized into a clean and intuitive directory structure.
-
-
+```
 
 traffic\_congestion\_project/
-├── dataset/                \# Holds the manually curated image dataset
+├── dataset/                # Image dataset
 │   ├── High\_Congestion/
 │   └── Low\_Congestion/
-├── models/                 \# Stores the trained .keras model files
-│   ├── custom\_cnn\_model.keras
-│   └── ...
-├── results/                \# Contains output graphs and evaluation reports
-│   ├── custom\_cnn\_confusion\_matrix.png
-│   └── ...
-├── scripts/                \# Contains all Python scripts
+├── models/                 # Trained .keras models
+├── results/                # Evaluation outputs
+├── scripts/                # Python scripts
 │   ├── preprocess\_data.py
 │   ├── train\_cnn.py
 │   ├── train\_transfer.py
 │   └── evaluate.py
-├── README.md               \# This documentation file
-└── requirements.txt        \# List of project dependencies
+├── README.md
+└── requirements.txt
 
-`
+````
 
 ---
 
 ## ⚙ Getting Started
 
-To get a local copy up and running, follow these simple steps.
+### 1️⃣ Dataset Setup
+- Download from Kaggle: [Traffic Management - Image Dataset](https://www.kaggle.com/datasets/satyampd/traffic-management-image-dataset)
+- Create folders:  
+  `dataset/High_Congestion/` and `dataset/Low_Congestion/`
+- Move:
+  - Dense traffic images → **High_Congestion**
+  - Sparse traffic images → **Low_Congestion**
 
-### 1. Dataset Setup
+### 2️⃣ Installation
+```bash
+# Clone the repo
+git clone https://github.com/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN.git
+cd Traffic_Congestion_Monitoring_CNN
 
-This project uses a curated subset of the *Traffic Management - Image Dataset* from Kaggle.
-
-* *Source*: [Traffic Management - Image Dataset](https://www.kaggle.com/datasets/satyampd/traffic-management-image-dataset)
-* *Instructions*:
-    1.  Download the dataset from the source link.
-    2.  In your local project's dataset/ directory, create two empty folders: High_Congestion and Low_Congestion.
-    3.  Copy all images from the downloaded train/dense traffic folder and paste them into your High_Congestion folder.
-    4.  Copy all images from the downloaded train/sparse traffic folder and paste them into your Low_Congestion folder.
-
-### 2. Installation
-
-Clone the repository and install the required packages.
-
-bash
-# Clone this repository
-git clone [https://github.com/YOUR_USERNAME/traffic_congestion_project.git](https://github.com/YOUR_USERNAME/traffic_congestion_project.git)
-
-# Navigate to the project directory
-cd traffic_congestion_project
-
-# Install the required Python libraries
+# Install dependencies
 pip install -r requirements.txt
-`
+````
 
-### 3\. Usage
+### 3️⃣ Training Models
 
-All scripts are run from the command line inside the scripts/ directory.
-
-bash
-# Navigate to the scripts directory
+```bash
 cd scripts
 
-
-*Training the Models (Run these one by one):*
-
-bash
-# 1. Train the Custom CNN
+# Custom CNN
 python train_cnn.py
 
-# 2. Train VGG16
+# Transfer Learning
 python train_transfer.py --model vgg16
-
-# 3. Train ResNet50
 python train_transfer.py --model resnet50
-
-# 4. Train MobileNetV2
 python train_transfer.py --model mobilenet
+```
 
+### 4️⃣ Evaluation
 
-*Evaluating the Models:*
-
-After all models are trained, run the evaluation script to generate reports and confusion matrices.
-
-bash
+```bash
 python evaluate.py
+```
 
+---
 
------
+## 💡 Future Enhancements
 
-## 📈 Model Performance & Comparison
+* 🎥 **Real-time Video Processing** using OpenCV
+* 🌐 **Web App Deployment** (Flask / Streamlit)
+* 🚗 **Multi-Class Detection** (accident, roadwork, fire, etc.)
+* 🎯 **Hyperparameter Optimization** with Optuna / KerasTuner
 
-The evaluation script generates a detailed classification report for each model. The results clearly indicate that transfer learning models provide a substantial improvement over a CNN built from scratch.
-
-| Model                 | Final Accuracy | Key Observation                                  |
-| --------------------- | :------------: | ------------------------------------------------ |
-| Custom CNN            |      89%       | Good baseline, but struggles with complex scenes. |
-| VGG16 (Transfer)      |      96%       | Huge improvement, proving the value of pre-training.|
-| MobileNetV2 (Transfer)|      98%       | Excellent accuracy, highly efficient model.      |
-| *ResNet50 (Transfer)* |    *99%* | *Best performance*, nearly flawless classification.|
-
-The superior performance of ResNet50 can be attributed to its deep residual architecture, which allows it to learn more complex features from the images without suffering from vanishing gradients—a common problem in very deep networks.
-
------
-
-## 💡 Future Work
-
-  * *Real-time Implementation:* Adapt the system to process live video feeds from traffic cameras using OpenCV.
-  * *Web Application:* Deploy the winning model as an interactive web application using *Flask* or *Streamlit* where users can upload their own traffic images for classification.
-  * *Expand Classification:* Incorporate more classes like accident, road work, or fire to build a comprehensive traffic event detection system.
-  * *Hyperparameter Tuning:* Utilize tools like KerasTuner or Optuna to systematically find the optimal hyperparameters and potentially increase accuracy further.
-
------
+---
 
 ## 📜 License
 
-This project is distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License. See `LICENSE` for details.
 
-text
-Copyright (c) 2025 [Rama Venkata Manikanta Sairam Kattunga]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-
-
------
+---
 
 ## 📧 Contact
 
-*Rama Venkata Manikanta Sairam Kattunga* 
-https://simple-portfolio-sigma-orpin.vercel.app/- 
-sairamkattunga333@gmail.com
-
-Project Link: [https://github.com/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN]([https://www.google.com/search?q=https://github.com/YOUR_USERNAME/traffic_congestion_project](https://github.com/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN))
-
-```
-```
+**Rama Venkata Manikanta Sairam Kattunga**
+🌐 [Portfolio](https://simple-portfolio-sigma-orpin.vercel.app/)
+📩 [sairamkattunga333@gmail.com](mailto:sairamkattunga333@gmail.com)
+📂 [GitHub Repo](https://github.com/Sairam-kattunga/Traffic_Congestion_Monitoring_CNN)
