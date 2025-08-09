@@ -1,8 +1,5 @@
-tensorflow
+tensorflow==2.16.1
+gradio==4.31.0
 numpy
-matplotlib
-scikit-learn
-seaborn
-gradio
 Pillow
 h5py
