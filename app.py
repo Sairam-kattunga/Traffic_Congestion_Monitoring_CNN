@@ -62,4 +62,5 @@ demo = gr.Interface(
 
 # --- 5. Launch the App ---
 if __name__ == "__main__":
-    demo.launch()
+    # AFTER
+    demo.launch(share=False)
