@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🚦 Monitoring Traffic Congestion in Smart Cities Using CNN
 
 ![Project Banner](https://i.imgur.com/vHqjA0G.jpeg)
@@ -163,18 +163,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy...
 [Your Name] - [Your Portfolio Website/LinkedIn Profile URL] - [your.email@example.com]
 
 Project Link: https://github.com/YOUR_USERNAME/traffic_congestion_project
-=======
----
-title: Traffic Congestion Detector
-emoji: 📈
-colorFrom: blue
-colorTo: pink
-sdk: gradio
-sdk_version: 5.42.0
-app_file: app.py
-pinned: false
-license: mit
----
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
->>>>>>> 1558bf9775525e693755ed6852f22575e9cf67f9
