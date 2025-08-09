@@ -1,14 +1,4 @@
----
-title: Traffic Congestion Detector
-emoji: 🚦
-colorFrom: blue
-colorTo: green
-sdk: gradio
-python_version: 3.10
-sdk_version: 3.50.2
-app_file: app.py
-pinned: false
----
+
 # 🚦 Monitoring Traffic Congestion in Smart Cities Using CNN
 
 <div align="center">
@@ -92,7 +82,7 @@ traffic\_congestion\_project/
 ## ⚙ Getting Started
 
 ### 1️⃣ Dataset Setup
-- Download from Kaggle: [Traffic Management - Image Dataset](https://www.kaggle.com/datasets/satyampd/traffic-management-image-dataset)
+- Download from Kaggle: [Traffic Management - Image Dataset](https://www.kaggle.com/datasets/fedesoriano/traffic-prediction-dataset)
 - Create folders:  
   `dataset/High_Congestion/` and `dataset/Low_Congestion/`
 - Move:
@@ -147,17 +137,6 @@ Distributed under the MIT License. See `LICENSE` for details.
 ---
 
 ## 📧 Contact
-
-<<<<<<< HEAD
-Copyright (c) 2025 [Your Name]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy...
-📧 Contact
-[Your Name] - [Your Portfolio Website/LinkedIn Profile URL] - [your.email@example.com]
-
-Project Link: https://github.com/YOUR_USERNAME/traffic_congestion_project
-x
-=======
 **Rama Venkata Manikanta Sairam Kattunga**
 🌐 [Portfolio](https://simple-portfolio-sigma-orpin.vercel.app/)
 📩 [sairamkattunga333@gmail.com](mailto:sairamkattunga333@gmail.com)
